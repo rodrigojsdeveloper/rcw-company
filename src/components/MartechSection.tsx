@@ -17,17 +17,11 @@ const MartechSection: React.FC = () => {
     if (sectionRef.current) {
       observer.observe(sectionRef.current);
     }
-
-    return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
-      }
-    };
   }, []);
 
   return (
     <section
-      id="método-rcw"
+      id="metodo-rcw"
       ref={sectionRef}
       className="py-16 md:py-24 bg-[#111111] opacity-0 transition-opacity duration-1000"
     >

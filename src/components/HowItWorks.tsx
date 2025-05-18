@@ -24,12 +24,6 @@ const HowItWorks: React.FC = () => {
     if (sectionRef.current) {
       observer.observe(sectionRef.current);
     }
-
-    return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
-      }
-    };
   }, []);
 
   return (
@@ -58,39 +52,46 @@ const HowItWorks: React.FC = () => {
           <div className="relative z-10">
             {[
               {
+                id: 'diagnostico-estrategico',
                 icon: <Target className="text-[#a2db26]" size={28} />,
                 title: "Diagnóstico Estratégico",
                 description: "Análise completa do seu negócio, mercado e concorrência para identificar oportunidades."
               },
               {
+                id: 'planejamento-rcw',
                 icon: <Zap className="text-[#a2db26]" size={28} />,
                 title: "Planejamento RCW",
                 description: "Desenvolvimento de um plano personalizado com KPIs claros e metas de crescimento."
               },
               {
+                id: 'implementacao-tecnica',
                 icon: <BarChart4 className="text-[#a2db26]" size={28} />,
                 title: "Implementação Técnica",
                 description: "Execução de estratégias de marketing digital, automação e qualificação de leads."
               },
               {
+                id: 'smarketing-integrado',
                 icon: <Users className="text-[#a2db26]" size={28} />,
                 title: "Smarketing Integrado",
                 description: "Alinhamento entre as equipes de marketing e vendas para um processo sem atritos."
               },
               {
+                id: 'otimizacao-continua',
                 icon: <TrendingUp className="text-[#a2db26]" size={28} />,
                 title: "Otimização Contínua",
                 description: "Análise de resultados e refinamento constante para maximizar o ROI."
               },
               {
+                id: 'escala-expansao',
                 icon: <Repeat className="text-[#a2db26]" size={28} />,
                 title: "Escala e Expansão",
                 description: "Ampliação das estratégias bem-sucedidas para novos canais e mercados."
               }
             ].map((step, index) => (
               <div 
+                id={step.id}
                 key={index} 
-                className={`flex flex-col md:flex-row items-center md:items-start mb-12 md:mb-24 ${
+                className={`flex scroll-mt-20 flex-col md:flex-row items-center md:items-start mb-12 md:mb-24 ${
                   index % 2 === 0 ? 'md:flex-row-reverse' : ''
                 }`}
               >

@@ -31,13 +31,18 @@ const Header: React.FC = () => {
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
-            {['Início', 'Método RCW', 'Como Funciona', 'Contato'].map((item) => (
-              <a 
-                key={item} 
-                href={`#${item.toLowerCase().replace(' ', '-')}`}
+            {[
+              { label: 'Início', path: '#inicio' },
+              { label: 'Método RCW', path: '#metodo-rcw' },
+              { label: 'Como Funciona', path: '#como-funciona' },
+              { label: 'Contato', path: '#contato' }
+            ].map(({ label, path }) => (
+              <a
+                key={label}
+                href={path}
                 className="text-white hover:text-[#a2db26] transition-colors duration-300 font-medium"
               >
-                {item}
+                {label}
               </a>
             ))}
             <a 

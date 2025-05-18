@@ -1,28 +1,22 @@
-import React from 'react';
-import Header from './components/Header';
-import HeroSection from './components/HeroSection';
-import ExpectationBreaker from './components/ExpectationBreaker';
-import MartechSection from './components/MartechSection';
-import CallToAction from './components/CallToAction';
-import HowItWorks from './components/HowItWorks';
-import Partners from './components/Partners';
-import Footer from './components/Footer';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import Home from './components/Home';
+import TermsOfUse from './components/TermsOfUse';
+import PrivacyPolicy from './components/PrivacyPolicy';
+import CookiesPolicy from './components/CookiesPolicy';
+import NotFound from './components/NotFound';
 
 function App() {
   return (
-    <div className="bg-[#111111] text-white min-h-screen font-sans">
-      <Header />
-      <main>
-        <HeroSection />
-        <ExpectationBreaker />
-        <MartechSection />
-        <CallToAction />
-        <HowItWorks />
-        <Partners />
-      </main>
-      <Footer />
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/termos-de-uso" element={<TermsOfUse />} />
+        <Route path="/politica-de-privacidade" element={<PrivacyPolicy />} />
+        <Route path="/cookies" element={<CookiesPolicy />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
+    </Router>
   );
 }
 
-export default App;
+export default App

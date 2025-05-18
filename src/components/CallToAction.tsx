@@ -17,12 +17,6 @@ const CallToAction: React.FC = () => {
     if (sectionRef.current) {
       observer.observe(sectionRef.current);
     }
-
-    return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
-      }
-    };
   }, []);
 
   return (
@@ -46,7 +40,7 @@ const CallToAction: React.FC = () => {
                 href="https://typebot.io/geral"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="inline-block w-full bg-[#a2db26] hover:bg-[#b3ec37] text-[#111111] font-bold px-6 py-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2"
+                className="w-full bg-[#a2db26] hover:bg-[#b3ec37] text-[#111111] font-bold px-6 py-4 rounded-lg transition-all duration-300 flex items-center justify-center space-x-2"
               >
                 <span>Fale com um Especialista</span>
                 <ArrowRight size={20} />

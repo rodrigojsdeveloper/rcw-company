@@ -38,15 +38,19 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-white font-semibold mb-4">Empresa</h3>
             <ul className="space-y-3">
-              {["Sobre nós", "Equipe", "Carreiras", "Parceiros", "Blog"].map((item, index) => (
-                <li key={index}>
-                  <a 
-                    href="#"
-                    target="_blank"
-                    rel="noopener noreferrer"
+              {[
+                { label: "Início", href: "#inicio" },
+                { label: "Método RCW", href: "#metodo-rcw" },
+                { label: "Como Funciona", href: "#como-funciona" },
+                { label: "Parceiros", href: "#parceiros" },
+                { label: "Contato", href: "#contato" }
+              ].map(({ label, href }) => (
+                <li key={label}>
+                  <a
+                    href={href}
                     className="text-gray-400 hover:text-[#a2db26] transition-colors duration-300"
                   >
-                    {item}
+                    {label}
                   </a>
                 </li>
               ))}
@@ -54,17 +58,22 @@ const Footer: React.FC = () => {
           </div>
           
           <div>
-            <h3 className="text-white font-semibold mb-4">Serviços</h3>
+            <h3 className="text-white font-semibold mb-4">Método RCW</h3>
             <ul className="space-y-3">
-              {["Marketing Digital", "Automação de Vendas", "Growth Hacking", "Análise de Dados", "Consultoria"].map((item, index) => (
-                <li key={index}>
+              {[
+                { label: "Diagnóstico Estratégico", href: "#diagnostico-estrategico" },
+                { label: "Planejamento RCW", href: "#planejamento-rcw" },
+                { label: "Implementação Técnica", href: "#implementacao-tecnica" },
+                { label: "Smarketing Integrado", href: "#smarketing-integrado" },
+                { label: "Otimização Contínua", href: "#otimizacao-continua" },
+                { label: "Escala e Expansão", href: "#escala-expansao" }
+              ].map(({ label, href }) => (
+                <li key={label}>
                   <a 
-                    href="#"
-                    target="_blank"
-                    rel="noopener noreferrer"
+                    href={href}
                     className="text-gray-400 hover:text-[#a2db26] transition-colors duration-300"
                   >
-                    {item}
+                    {label}
                   </a>
                 </li>
               ))}
@@ -75,13 +84,13 @@ const Footer: React.FC = () => {
             <h3 className="text-white font-semibold mb-4">Contato</h3>
             <ul className="space-y-3">
               <li className="text-gray-400">
-                <strong className="text-white">Email:</strong> contato@rcwcompany.com.br
+                <strong className="text-white">Email:</strong> contato@rcwcompany.com
               </li>
               <li className="text-gray-400">
-                <strong className="text-white">Telefone:</strong> (11) 4002-8922
+                <strong className="text-white">Telefone:</strong> (11) 5198-7123
               </li>
               <li className="text-gray-400">
-                <strong className="text-white">Endereço:</strong> Av. Paulista, 1000, São Paulo - SP
+                <strong className="text-white">Endereço:</strong> Guarulhos, São Paulo BR
               </li>
             </ul>
           </div>
@@ -93,15 +102,18 @@ const Footer: React.FC = () => {
               © 2013 - {currentYear} RCW Company. Todos os direitos reservados.
             </div>
             <div className="flex space-x-6">
-              {["Política de Privacidade", "Cookies", "Termos de Uso"].map((item, index) => (
-                <a 
+              {[
+                { label: "Política de Privacidade", href: "/politica-de-privacidade" },
+                { label: "Cookies", href: "/cookies" },
+                { label: "Termos de Uso", href: "/termos-de-uso" }
+              ].map(({ label, href }, index) => (
+                <a
                   key={index}
-                  href="#"
+                  href={href}
                   target="_blank"
-                  rel="noopener noreferrer"
                   className="text-gray-500 hover:text-[#a2db26] text-sm transition-colors duration-300"
                 >
-                  {item}
+                  {label}
                 </a>
               ))}
             </div>

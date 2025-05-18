@@ -41,6 +41,7 @@ const Partners: React.FC = () => {
 
   return (
     <section
+      id="parceiros"
       ref={sectionRef}
       className="py-16 md:py-20 bg-[#161616] opacity-0 transition-opacity duration-1000"
     >

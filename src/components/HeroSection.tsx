@@ -17,17 +17,11 @@ const HeroSection: React.FC = () => {
     if (sectionRef.current) {
       observer.observe(sectionRef.current);
     }
-
-    return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
-      }
-    };
   }, []);
 
   return (
     <section 
-      id="início" 
+      id="inicio" 
       ref={sectionRef}
       className="pt-32 pb-20 md:pt-40 md:pb-32 opacity-0 transition-opacity duration-1000 bg-gradient-to-b from-[#1a1a1a] to-[#111111]"
     >
