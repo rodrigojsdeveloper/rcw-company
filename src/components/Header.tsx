@@ -69,20 +69,25 @@ const Header: React.FC = () => {
 
       {/* Mobile Navigation */}
       <div 
-        className={`md:hidden absolute w-full bg-[#1a1a1a] transition-all duration-300 ${
+        className={`md:hidden absolute w-full bg-[#111111]/95 transition-all duration-300 ${
           isMenuOpen ? 'max-h-screen py-6 shadow-xl opacity-100' : 'max-h-0 py-0 opacity-0 overflow-hidden'
         }`}
       >
         <div className="container mx-auto px-4">
           <nav className="flex flex-col space-y-4">
-            {['Início', 'Método RCW', 'Como Funciona', 'Contato'].map((item) => (
+            {[
+              { label: 'Início', path: '#inicio' },
+              { label: 'Método RCW', path: '#metodo-rcw' },
+              { label: 'Como Funciona', path: '#como-funciona' },
+              { label: 'Contato', path: '#contato' }
+            ].map(({ label, path }) => (
               <a 
-                key={item} 
-                href={`#${item.toLowerCase().replace(' ', '-')}`}
+                key={label} 
+                href={path}
                 className="text-white hover:text-[#a2db26] transition-colors duration-300 py-2 font-medium border-b border-[#333333]"
                 onClick={toggleMenu}
               >
-                {item}
+                {label}
               </a>
             ))}
             <a 
