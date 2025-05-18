@@ -8,7 +8,7 @@ const Footer: React.FC = () => {
   return (
     <footer className="bg-[#0f0f0f] pt-16 pb-8">
       <div className="container mx-auto px-4 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
+        <div className="grid grid-cols-1 lg:grid-cols-4 gap-12 mb-12">
           <div className="col-span-1 md:col-span-1">
             <Logo />
             <p className="mt-4 text-gray-400 text-sm">
@@ -16,10 +16,10 @@ const Footer: React.FC = () => {
             </p>
             <div className="flex space-x-4 mt-6">
               {[
-                { icon: <Instagram size={20} />, link: "#" },
-                { icon: <Linkedin size={20} />, link: "#" },
-                { icon: <Youtube size={20} />, link: "#" },
-                { icon: <Facebook size={20} />, link: "#" }
+                { icon: <Instagram size={20} />, link: "https://www.instagram.com/rcwcompany/" },
+                { icon: <Linkedin size={20} />, link: "https://www.linkedin.com/company/rcwcompany" },
+                { icon: <Youtube size={20} />, link: "https://www.youtube.com/channel/UC0E7AkLcq3shWMmEXwUYgpw" },
+                { icon: <Facebook size={20} />, link: "https://www.facebook.com/rcwcompany" }
               ].map((social, index) => (
                 <a 
                   key={index}

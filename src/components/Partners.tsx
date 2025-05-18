@@ -1,9 +1,28 @@
 import React, { useEffect, useRef } from 'react';
 
+const clientImages = [
+  'magazord.png',
+  'weget2u.png',
+  'lojaintegrada.png',
+  'pgbsecurity.png',
+  'usina.png',
+  'mobye.png',
+  'enkoberta.png',
+  'beraca.png',
+  'grafsystem.png',
+  'versuo.png',
+  'systeminformatica.png',
+  'colegiofaraos.png',
+];
+
 const Partners: React.FC = () => {
   const sectionRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
+    const element = sectionRef.current;
+
+    if (!element) return;
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (entry.isIntersecting) {
@@ -13,16 +32,12 @@ const Partners: React.FC = () => {
       { threshold: 0.1 }
     );
 
-    if (sectionRef.current) {
-      observer.observe(sectionRef.current);
-    }
+    observer.observe(element);
 
     return () => {
-      if (sectionRef.current) {
-        observer.unobserve(sectionRef.current);
-      }
+      observer.unobserve(element);
     };
-  }, []);
+  }, []);  
 
   return (
     <section
@@ -38,16 +53,18 @@ const Partners: React.FC = () => {
             Empresas que confiaram no Método RCW e transformaram seus resultados
           </p>
         </div>
-        
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8">
-          {Array.from({ length: 12 }).map((_, index) => (
-            <div 
-              key={index} 
-              className="bg-[#1a1a1a] h-20 rounded-lg flex items-center justify-center transition-all duration-300 hover:bg-[#1f1f1f] opacity-70 hover:opacity-100"
+
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-6 gap-8">
+          {clientImages.map((image, index) => (
+            <div
+              key={index}
+              className="bg-[#1a1a1a] h-20 rounded-lg flex items-center justify-center transition-all duration-300 hover:bg-[#1f1f1f] opacity-70 hover:opacity-100 p-2"
             >
-              <div className="w-full h-full flex items-center justify-center text-gray-400 font-medium">
-                Cliente {index + 1}
-              </div>
+              <img
+                src={`/clients/${image}`}
+                alt={`Logo cliente ${index + 1}`}
+                className="max-h-12 object-contain"
+              />
             </div>
           ))}
         </div>
