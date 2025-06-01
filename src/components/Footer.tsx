@@ -39,11 +39,11 @@ const Footer: React.FC = () => {
             <h3 className="text-white font-semibold mb-4">Empresa</h3>
             <ul className="space-y-3">
               {[
-                { label: "Início", href: "#inicio" },
-                { label: "Método RCW", href: "#metodo-rcw" },
-                { label: "Como Funciona", href: "#como-funciona" },
-                { label: "Parceiros", href: "#parceiros" },
-                { label: "Contato", href: "#contato" }
+                { label: "Início", href: "/#inicio" },
+                { label: "Método RCW", href: "/#metodo-rcw" },
+                { label: "Como Funciona", href: "/#como-funciona" },
+                { label: "Parceiros", href: "/#parceiros" },
+                { label: "Contato", href: "/#contato" }
               ].map(({ label, href }) => (
                 <li key={label}>
                   <a
@@ -61,12 +61,12 @@ const Footer: React.FC = () => {
             <h3 className="text-white font-semibold mb-4">Método RCW</h3>
             <ul className="space-y-3">
               {[
-                { label: "Diagnóstico Estratégico", href: "#diagnostico-estrategico" },
-                { label: "Planejamento RCW", href: "#planejamento-rcw" },
-                { label: "Implementação Técnica", href: "#implementacao-tecnica" },
-                { label: "Smarketing Integrado", href: "#smarketing-integrado" },
-                { label: "Otimização Contínua", href: "#otimizacao-continua" },
-                { label: "Escala e Expansão", href: "#escala-expansao" }
+                { label: "Diagnóstico Estratégico", href: "/#diagnostico-estrategico" },
+                { label: "Planejamento RCW", href: "/#planejamento-rcw" },
+                { label: "Implementação Técnica", href: "/#implementacao-tecnica" },
+                { label: "Smarketing Integrado", href: "/#smarketing-integrado" },
+                { label: "Otimização Contínua", href: "/#otimizacao-continua" },
+                { label: "Escala e Expansão", href: "/#escala-expansao" }
               ].map(({ label, href }) => (
                 <li key={label}>
                   <a 

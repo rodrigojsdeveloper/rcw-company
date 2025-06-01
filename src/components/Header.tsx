@@ -32,10 +32,10 @@ const Header: React.FC = () => {
           {/* Desktop Navigation */}
           <nav className="hidden md:flex items-center space-x-8">
             {[
-              { label: 'Início', path: '#inicio' },
-              { label: 'Método RCW', path: '#metodo-rcw' },
-              { label: 'Como Funciona', path: '#como-funciona' },
-              { label: 'Contato', path: '#contato' }
+              { label: 'Início', path: '/#inicio' },
+              { label: 'Método RCW', path: '/#metodo-rcw' },
+              { label: 'Como Funciona', path: '/#como-funciona' },
+              { label: 'Contato', path: '/#contato' }
             ].map(({ label, path }) => (
               <a
                 key={label}
@@ -76,10 +76,10 @@ const Header: React.FC = () => {
         <div className="container mx-auto px-4">
           <nav className="flex flex-col space-y-4">
             {[
-              { label: 'Início', path: '#inicio' },
-              { label: 'Método RCW', path: '#metodo-rcw' },
-              { label: 'Como Funciona', path: '#como-funciona' },
-              { label: 'Contato', path: '#contato' }
+              { label: 'Início', path: '/#inicio' },
+              { label: 'Método RCW', path: '/#metodo-rcw' },
+              { label: 'Como Funciona', path: '/#como-funciona' },
+              { label: 'Contato', path: '/#contato' }
             ].map(({ label, path }) => (
               <a 
                 key={label} 
